@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.app {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form input {
+    width: 100%;
+    padding: 20px 10px 5px;
+    font-size: 1.4rem;
+    border: none;
+    border-bottom: 1px solid hotpink;
+    margin-bottom: 20px;
+}
+.form input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid hotpink;
+    margin-bottom: 18px;
+}
+.form .buttonPanel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form .buttonPanel button {
+    width: 30%;
+    border: 1px solid darkred;
+    background-color: crimson;
+    padding: 10px;
+    color: white;
+}
+
+.form .buttonPanel button:nth-child(odd) {
+    border-color: darkgreen;
+    background-color: green; 
+}
+.form .buttonPanel button:hover {
+    background-color: black;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list .task {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 10px 10px 10px;
+    background-color: hotpink;
+    margin: 10px 0;
+}
+.list .task span {
+    margin-bottom: 20px;
+    font-size: .85rem;
+    color: slateblue;
+    text-align: right;
+}
+.list .task p {
+    padding: 0 20px
+}
+.list .task ul {
+    display: flex;
+    list-style: none;
+    padding: 20px 10px 0;
+    justify-content: flex-end;
+}
+.list .task .no-tags {
+    text-align: right;
+    padding: 24px 10px 5px;
+    line-height: .9rem;
+    font-size: .7rem;
+}
+.list .task li {
+    font-size: .7rem;
+    padding: 3px 5px 4px;
+    border: 1px solid black;
+    line-height: .9rem;
+    background: grey;
+    margin-left: 4px;
+}
+
+.task.completed:after {
+    content: " (Completed)";
+    color: white;
+    margin-top: 10px;
+    padding: 3px 0 5px;
+    text-align: center;
+    background: crimson;
+}
